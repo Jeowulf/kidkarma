@@ -28,7 +28,8 @@ class KidsController < ApplicationController
 
     respond_to do |format|
       if @kid.save
-        format.html { redirect_to @kid, notice: 'Kid was successfully created.' }
+        sign_in @kid
+        format.html { redirect_to root_path, notice: 'New Kid here!' }
         format.json { render :show, status: :created, location: @kid }
       else
         format.html { render :new }
