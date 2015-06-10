@@ -1,5 +1,7 @@
 class Scoop < ActiveRecord::Base
-  validates :title, presence: true
+  belongs_to :kid
+  validates :headline, presence: true
+  validates :story, presence: true
 
   before_save :default_values
 

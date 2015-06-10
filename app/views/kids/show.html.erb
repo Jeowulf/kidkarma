@@ -1,0 +1,20 @@
+<div class="page-header">
+
+  <%= link_to edit_kid_path(@kid), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show kid</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>First name:</dt>
+  <dd><%= @kid.first_name %></dd>
+
+  <dt>Last name:</dt>
+  <dd><%= @kid.last_name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @kid.email %></dd>
+
+</dl>
