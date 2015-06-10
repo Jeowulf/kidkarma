@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_scoop_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Scoop
+  <% end %>
+  <h1>Extra! extra!  Read all about it!</h1>
+</div>
+
+<div class="table-responsive scoops">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Headline</th>
+            <th>Story</th>
+            <th>show</th>
+        <th>edit</th>
+        <th>destroy</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @scoops) do |scoop| %>
+            <td><%= scoop.headline %></td>
+            <td><%= scoop.story %></td>
+            <td><%= link_to 'Show', scoop %></td>
+        <td><%= link_to 'Edit', edit_scoop_path(scoop) %></td>
+        <td><%= link_to 'Destroy', scoop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
