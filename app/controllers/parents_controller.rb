@@ -1,4 +1,6 @@
 class ParentsController < ApplicationController
+  before_action :signed_in_parent, only: [:index, :show, :edit, :update, :destroy]
+  before_action :correct_parent, only: [:show, :edit, :update, :destroy]
   before_action :set_parent, only: [:show, :edit, :update, :destroy]
 
   # GET /parents
@@ -23,6 +25,7 @@ class ParentsController < ApplicationController
 
   # POST /parents
   # POST /parents.json
+
   def create
     @parent = Parent.new(parent_params)
 
@@ -70,5 +73,9 @@ class ParentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def parent_params
       params.require(:parent).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    end
+    def correct_parent
+      @parent = current_parent
+      redirect_to root_url if @parent.nil?
     end
 end

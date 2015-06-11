@@ -5,7 +5,7 @@
 @import "bootstrap.scss";
 
 body {
-  padding-top: $navbar-height + 10px;
+  padding-top: $navbar-height + 80px;
 }
 
 .page-header {
@@ -25,12 +25,83 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 main {
-  margin: 20px auto;
-  width: 800px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top:90px;
 }
 
-.todos {
+.scoops {
   th, td {
-    text-align:center
+    text-align:center;
   }
 }
+.nav {
+  padding-top: 20px;
+  padding-right: 20px;
+  background: white;
+}
+.navbar-brand {
+  padding-top: 90px;
+  font-size: 50px;
+  height: 150px;
+  background: white;
+}
+.navbar {
+  background: white;
+  border: none;
+}
+.scoopFeed {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top:90px;
+}
+.scoopList {
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top:90px;
+}
+.signIn, .signingIn {
+    width: 500px;
+    margin: 0 auto;
+    left: 200px;
+}
+.btn, .btn-hover {
+  background: transparent;
+  border: none;
+  color: black;
+}
+#new_kid.form-horizontal {
+  width: 500px;
+  margin: 0 auto;
+  left: 200px;
+}
+#new_parent.form-horizontal {
+  width: 500px;
+  margin: 0 auto;
+  left: 200px;
+}
+.control-label {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+.form-control {
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+#new {
+  text-align: center;
+  margin: 0 auto;
+  left: 50px;
+}
+#new_scoop {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form-group {
+  margin: 0 auto;
+}
+

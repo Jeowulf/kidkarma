@@ -1,4 +1,6 @@
 class KidsController < ApplicationController
+  before_action :signed_in_kid, only: [:index, :show, :edit, :update, :destroy]
+  before_action :correct_kid, only: [:show, :edit, :update, :destroy]
   before_action :set_kid, only: [:show, :edit, :update, :destroy]
 
   # GET /kids
@@ -71,5 +73,9 @@ class KidsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def kid_params
       params.require(:kid).permit(:first_name, :last_name, :email, :password, :password_confirmation, :parent_id)
+    end
+    def correct_kid
+      @kid = current_kid
+      redirect_to root_url if @kid.nil?
     end
 end

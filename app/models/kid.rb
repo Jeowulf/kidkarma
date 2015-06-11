@@ -14,11 +14,11 @@ class Kid < ActiveRecord::Base
 
   validates :password, length: { minimum: 8, maximum: 20 }
 
-  def User.new_remember_token
+  def Kid.new_remember_token
     SecureRandom.urlsafe_base64
   end
 
-  def User.digest(token)
+  def Kid.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
 

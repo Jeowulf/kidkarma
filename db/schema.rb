@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150610152842) do
     t.string   "remember_token"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "parent_id",       null: false
+    t.integer  "parent_id"
   end
 
   add_index "kids", ["email"], name: "index_kids_on_email", unique: true, using: :btree

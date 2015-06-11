@@ -1,6 +1,17 @@
-<div class="text-center jumbotron">
-  <h1>KidKarma</h1>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-  <%= link_to "Sign in",      signin_path, class: "btn btn-large btn-primary" %>
-  <br/>
+<div class="page-header">
+  <%= link_to new_scoop_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+     Write new scoop
+  <% end %>
+  <h1>Extra! Extra!  Read all about it!</h1>
+</div>
+
+<div class="scoopList">
+<% @scoops.each do |scoop| %>
+<%= scoop.headline %> <br>
+<br>
+<%= scoop.story %> <br>
+<br>
+<br>
+<% end %>
 </div>

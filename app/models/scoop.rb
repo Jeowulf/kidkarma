@@ -8,7 +8,8 @@ class Scoop < ActiveRecord::Base
   private
 
   def default_values
-    self.completed ||= false
+    self.headline ||= false
+    self.story ||= false
     nil                           # required so that TX will not rollback!!!
   end
 end

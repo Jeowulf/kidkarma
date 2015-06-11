@@ -13,7 +13,6 @@
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
-            <th>Password dig</th>
             <th></th>
         <th></th>
         <th></th>
@@ -24,11 +23,10 @@
       <%= content_tag_for(:tr, @kids) do |kid| %>
             <td><%= kid.first_name %></td>
             <td><%= kid.last_name %></td>
-            <td><%= kid.email %></td>
-            <td><%= kid.password_dig %></td>
-            <td><%= link_to 'Show', kid %></td>
+            <td><%= "Parent Email here" %></td>
+            <td><%= link_to 'Kid info', kid %></td>
         <td><%= link_to 'Edit', edit_kid_path(kid) %></td>
-        <td><%= link_to 'Destroy', kid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', kid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>
