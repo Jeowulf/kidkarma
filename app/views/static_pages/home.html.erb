@@ -3,15 +3,24 @@
     <span class="glyphicon glyphicon-plus"></span>
      Write new scoop
   <% end %>
-  <h1>Extra! Extra!  Read all about it!</h1>
+  <h1 class="extra">Extra! Extra!  Read all about it!</h1>
 </div>
-
 <div class="scoopList">
-<% @scoops.each do |scoop| %>
-<%= scoop.headline %> <br>
-<br>
-<%= scoop.story %> <br>
-<br>
-<br>
-<% end %>
+  <% @scoops.each do |scoop| %>
+  <div class="scoop" id="<%= scoop.id%>">
+    <%= scoop.headline %> <br>
+    <br>
+    <%= scoop.story %> <br>
+    <ul class="colorBar">
+      <li class="colors"><button class="grey"></button></li>
+      <li class="colors"><button class="green"></button></li>
+      <li class="colors"><button class="blue"></button></li>
+      <li class="colors"><button class="purple"></button></li>
+      <li class="colors"><button class="gold"></button></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <% end %>
 </div>
+<%= will_paginate @scoops %>

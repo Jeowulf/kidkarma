@@ -104,4 +104,80 @@ main {
 .form-group {
   margin: 0 auto;
 }
+.scoop {
+  border: 8px solid rgba(211, 211, 211, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.scoopGrey {
+  border: 8px solid rgba(211, 211, 211, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.scoopGreen {
+  border: 8px solid rgba(0, 255, 0, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.scoopBlue {
+  border: 8px solid rgba(0, 0, 255, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.scoopPurple {
+  border: 8px solid rgba(148, 0, 211, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.scoopYellow {
+  border: 8px solid rgba(255, 212, 84, 1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.colorBar {
+ text-align: center;
+ padding-left: 0;
+}
+.colorBarTwo {
+  text-align: right;
+  padding: 20px;
+}
+.colors {
+  display: inline;
+  list-style: none;
+}
+button {
+  height: 30px;
+  width: 30px;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
+  border: 3px solid white;
+}
+.grey {
+  background: rgba(211, 211, 211, 1);
+}
+.green {
+  background: rgba(0, 255, 0, 1);
+}
+.blue {
+  background: rgba(0, 0, 255, 1);
+}
+.purple {
+  background: rgba(148, 0, 211, 1);
+}
+.gold {
+  background: rgba(255, 212, 84, 1);
+}
+.extra {
+  color: green;
+}
+.extraTwo {
+  color: blue;
+}
 

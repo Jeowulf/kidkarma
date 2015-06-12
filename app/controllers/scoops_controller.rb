@@ -6,7 +6,7 @@ class ScoopsController < ApplicationController
   # GET /scoops
   # GET /scoops.json
   def index
-    @scoops = current_kid.scoops.order(created_at: :desc)
+    @scoops = current_kid.scoops.paginate(page: params[:page], per_page: 30).order(created_at: :desc)
   end
 
   # GET /scoops/1
