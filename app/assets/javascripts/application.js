@@ -20,11 +20,6 @@ $(document).ready(function () {
   'use strict';
 
 
-
-
-
-
-
 $('.green').click(function() {
   $(this).toggleClass('.greenTwo');
 });

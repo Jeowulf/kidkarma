@@ -22,6 +22,10 @@ class VotesController < ApplicationController
   def edit
   end
 
+  def blue_vote
+    @vote = Vote.new(color: 'blue', kid_id: current_kid_id, scoop_id: scoop_id)
+  end
+
   # POST /votes
   # POST /votes.json
   def create
@@ -29,7 +33,7 @@ class VotesController < ApplicationController
 
     respond_to do |format|
       if @vote.save
-        format.html { redirect_to @vote, notice: 'Vote was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Voted!' }
         format.json { render :show, status: :created, location: @vote }
       else
         format.html { render :new }
