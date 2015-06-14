@@ -1,5 +1,6 @@
 class Kid < ActiveRecord::Base
-   has_many :scoops, dependent: :destroy
+  has_many :scoops, dependent: :destroy
+  has_many :votes, dependent: :destroy
 
   before_save { email.downcase! }
 

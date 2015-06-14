@@ -110,31 +110,31 @@ main {
   border-radius: 10px;
   margin: 5px;
 }
-.scoopGrey {
+.grey {
   border: 8px solid rgba(211, 211, 211, 1);
   padding: 20px;
   border-radius: 10px;
   margin: 5px;
 }
-.scoopGreen {
+.green {
   border: 8px solid rgba(0, 255, 0, 1);
   padding: 20px;
   border-radius: 10px;
   margin: 5px;
 }
-.scoopBlue {
+.blue {
   border: 8px solid rgba(0, 0, 255, 1);
   padding: 20px;
   border-radius: 10px;
   margin: 5px;
 }
-.scoopPurple {
+.purple {
   border: 8px solid rgba(148, 0, 211, 1);
   padding: 20px;
   border-radius: 10px;
   margin: 5px;
 }
-.scoopYellow {
+.gold {
   border: 8px solid rgba(255, 212, 84, 1);
   padding: 20px;
   border-radius: 10px;
@@ -143,15 +143,26 @@ main {
 .colorBar {
  text-align: center;
  padding-left: 0;
+ height: 100px;
 }
 .colorBarTwo {
   text-align: right;
   padding: 20px;
 }
 .colors {
-  display: inline;
   list-style: none;
+  display: inline !important;
+  padding: 10px;
+  position:relative;
 }
+
+.color-button {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: inline;
+}
+
 button {
   height: 30px;
   width: 30px;
@@ -159,20 +170,24 @@ button {
   padding: 10px;
   border: 3px solid white;
 }
-.grey {
+.button-grey {
   background: rgba(211, 211, 211, 1);
 }
-.green {
+.button-green {
   background: rgba(0, 255, 0, 1);
 }
-.blue {
+.button-blue {
   background: rgba(0, 0, 255, 1);
 }
-.purple {
+.button-purple {
   background: rgba(148, 0, 211, 1);
 }
-.gold {
+.button-gold {
   background: rgba(255, 212, 84, 1);
+}
+.button-greenTwo {
+  background: rgba(0, 255, 0, 1);
+  border: 3px solid rgba(0, 255, 0, 1);
 }
 .extra {
   color: green;
@@ -180,4 +195,35 @@ button {
 .extraTwo {
   color: blue;
 }
+#greys {
+  position: relative;
+  left: 125px;
+}
+#greens {
+  position: relative;
+  left: 200px;
+  bottom: 69px;
+}
+#blues {
+  position: relative;
+  left: 275px;
+  bottom: 138px;
+}
+#purples {
+  position: relative;
+  left: 350px;
+  bottom: 207px;
+}
+#golds {
+  position: relative;
+  left: 425px;
+  bottom: 276px;
+}
+form.button_to {
+  width: 50px;
+}
+
+
+
+
 

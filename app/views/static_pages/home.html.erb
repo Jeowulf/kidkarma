@@ -7,20 +7,29 @@
 </div>
 <div class="scoopList">
   <% @scoops.each do |scoop| %>
-  <div class="scoop" id="<%= scoop.id%>">
+  <div class="<%=scoop.color%>" id="<%= scoop.id%>">
     <%= scoop.headline %> <br>
     <br>
     <%= scoop.story %> <br>
     <ul class="colorBar">
-      <li class="colors"><button class="grey"></button></li>
-      <li class="colors"><button class="green"></button></li>
-      <li class="colors"><button class="blue"></button></li>
-      <li class="colors"><button class="purple"></button></li>
-      <li class="colors"><button class="gold"></button></li>
+      <p>scoops: <%= @scoops %> </p>
+      <p>Color: <%= @vote %> </p>
+      <p>votes: <%= @votes %> </p>
+      <div class="colors"><li class="colors" id="greys"><%= button_to "   ", votes_path(color: 'grey', kid_id: current_kid, scoop_id: scoop.id, :method => :create), class: 'button-grey color-button' %></li></div>
+      <div class="colors"><li class="colors" id="greens"><%= button_to "   ", votes_path(color: 'green', kid_id: current_kid, scoop_id: scoop.id, :method => :create), class: 'button-green color-button' %></li></div>
+      <div class="colors"><li class="colors" id="blues"><%= button_to "   ", votes_path(color: 'blue', kid_id: current_kid, scoop_id: scoop.id, :method => :create), class: 'button-blue color-button' %></li></div>
+      <div class="colors"><li class="colors" id="purples"><%= button_to "   ", votes_path(color: 'purple', kid_id: current_kid, scoop_id: scoop.id, :method => :create), class: 'button-purple color-button' %></li></div>
+      <div class="colors"><li class="colors" id="golds"><%= button_to "   ", votes_path(color: 'gold', kid_id: current_kid, scoop_id: scoop.id, :method => :create), class: 'button-gold color-button' %></li></div>
     </ul>
+  <br>
+  <br>
+  <br>
+     <h3>Shared by <%= scoop.kid[:first_name].capitalize %></h3>
+  <br>
+
+
   </div>
-  <br>
-  <br>
+
   <% end %>
 </div>
 <%= will_paginate @scoops %>

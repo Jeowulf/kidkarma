@@ -19,38 +19,17 @@
 $(document).ready(function () {
   'use strict';
 
-var colors = [0, 0, 0, 0, 0];
-
-function displayColor(colors) {
-    if (colors[0] >= colors[1] && colors[0] >= colors[2] && colors[0] >= colors[3]  && colors[0] >= colors[4]) {
-      result = "grey";
-    }
-    else if (colors[1] >= colors[0] && colors[1] >= colors[2] && colors[1] >= colors[3]  && colors[1] >= colors[4]) {
-      result = "green";
-    }
-    else if (colors[2] >= colors[1] && colors[2] >= colors[0] && colors[2] >= colors[3]  && colors[2] >= colors[4]) {
-      result = "blue";
-    }
-    else if (colors[3] >= colors[1] && colors[3] >= colors[2] && colors[3] >= colors[0]  && colors[3] >= colors[4]) {
-      result = "purple";
-    }
-    else if (colors[4] >= colors[1] && colors[4] >= colors[2] && colors[4] >= colors[3]  && colors[4] >= colors[0]) {
-      result = "yellow";
-    }
-    return result;
-}
 
 
 
 
 
 
-// $('.green').click(function() {
-//   $('.extra').toggleClass('extraTwo');
-//   $(this).parents('.scoop').toggleClass('scoopGreen');
-//   console.log("titties");
-// });
+$('.green').click(function() {
+  $(this).toggleClass('.greenTwo');
+});
 
+// $(this).parents('.scoop').toggleClass('scoopGreen');
 
 // function colorVoting () {
 //   var colors = [0,0,0,0,0];

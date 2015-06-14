@@ -1,5 +1,6 @@
 class Scoop < ActiveRecord::Base
   belongs_to :kid
+  has_many :votes
   validates :headline, presence: true
   validates :story, presence: true
 

@@ -13,7 +13,10 @@ class ScoopsController < ApplicationController
   # GET /scoops/1.json
   def show
   end
-
+  def upvote
+    @scoop = Scoop.find(params[:id])
+    @scoop.votes.create
+  end
   # GET /scoops/new
   def new
     @scoop = Scoop.new
