@@ -19,20 +19,15 @@ class StaticPagesController < ApplicationController
       for x in 0..@votes.length-1
         if @votes[x][:color] == 'grey'
           grey += 1
-          puts "grey = "
-          puts grey
         end
         if @votes[x][:color] == 'green'
           green += 1
-
         end
         if @votes[x][:color] == 'blue'
           blue += 1
-
         end
         if @votes[x][:color] == 'purple'
           purple += 1
-
         end
         if @votes[x][:color] == 'gold'
           gold += 1

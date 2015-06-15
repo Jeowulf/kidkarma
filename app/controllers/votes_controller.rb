@@ -36,7 +36,7 @@ class VotesController < ApplicationController
         format.html { redirect_to root_path, notice: 'Voted!' }
         format.json { render :show, status: :created, location: @vote }
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: 'Already Voted!' }
         format.json { render json: @vote.errors, status: :unprocessable_entity }
       end
     end
@@ -47,7 +47,7 @@ class VotesController < ApplicationController
   def update
     respond_to do |format|
       if @vote.update(vote_params)
-        format.html { redirect_to @vote, notice: 'Vote was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Vote was successfully updated.' }
         format.json { render :show, status: :ok, location: @vote }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class VotesController < ApplicationController
   def destroy
     @vote.destroy
     respond_to do |format|
-      format.html { redirect_to votes_url, notice: 'Vote was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Vote was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
